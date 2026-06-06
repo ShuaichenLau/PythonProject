@@ -1,5 +1,5 @@
 import unittest
-from my_calculator import my_adder
+from src.my_calculator import my_adder
 
 class TestMyAdder(unittest.TestCase):
     def test_my_adder(self):

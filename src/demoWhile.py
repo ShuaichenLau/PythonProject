@@ -12,7 +12,7 @@ print("num_a={}".format(num_a))
 print("num_b={}".format(num_b))
 print("num_c={}".format(num_c))
 
-with open('./data2.txt', 'w', encoding='utf-8') as f:
+with open('data2.txt', 'w', encoding='utf-8') as f:
     f.writelines("num_a={}\n".format(num_a))
     f.writelines("num_b={}\n".format(num_b))
     f.writelines("num_c={}\n".format(num_c))
