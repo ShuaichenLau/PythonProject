@@ -57,5 +57,8 @@ print(6 << 3)
 
 lst7 = {"zhangsan": 11, "lisi": 12}
 print(type(lst7))
+
+print(lst7.get("zhangsan"))
+
 for item in lst7:
     print(item + "  " + str(lst7[item]))
