@@ -30,5 +30,39 @@ print("not find {}".format(hello.find('A')))
 
 # print("大小写  index {}".format(hello.index('H')))
 
+print(hello.replace(" ","").title())
+
+
+
+name = 'zhangsan'
+age = 20
+print('我的名字是%s,今年%d岁' %(name,age))
+print('我的名字是{},今年{}岁'.format(name,age))
+
+# 字符串的编码与解码
+
+hehe = '天涯共此时'
+#  编码
+print(hehe.encode('UTF-8'))
+print(hehe.encode('GBK'))
+
+# 解码
+print(hehe.encode('UTF-8').decode('UTF-8'))
+
+# 编码 解码有码制异常
+# UnicodeDecodeError: 'gbk' codec can't decode byte 0xad in position 10: illegal multibyte sequence
+# decoding with 'GBK' codec failed
+# print(hehe.encode('UTF-8').decode('GBK'))
+
+# 乱码 可以屏蔽异常输出 errors='ignore'
+print(hehe.encode('UTF-8').decode('GBK',errors='ignore'))
+print(hehe.encode('GBK').decode('UTF-8',errors='ignore'))
+
+# 战略上藐视敌人 战术上重视敌人
+
+
+
+
+
 
 
