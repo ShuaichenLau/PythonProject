@@ -1,3 +1,6 @@
+import math
+
+
 class Car:
     def __init__(self, brand):
         self.brand = brand
@@ -13,3 +16,12 @@ bmw=Car('BMW_X3')
 bmw.start()
 
 print(dir(bmw))
+
+
+print(id(math))
+print(type(math))
+
+print(math)
+print(math.pi)
+
+print(math.log2(2))
