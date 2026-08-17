@@ -35,5 +35,3 @@ Student.eat(stu1)
 Student.eat(stu2)
 
 
-
-

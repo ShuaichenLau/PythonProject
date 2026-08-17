@@ -1,3 +1,31 @@
+import math
+
+
+class Car:
+    def __init__(self, brand):
+        self.brand = brand
+
+    def start(self):
+        print('{} 汽车已经启动'.format(self.brand))
+
+    def stop(self):
+        print('{} 汽车已经停止'.format(self.brand))
+
+
+bmw=Car('BMW_X3')
+bmw.start()
+
+print(dir(bmw))
+
+
+print(id(math))
+print(type(math))
+
+print(math)
+print(math.pi)
+
+print(math.log2(2))
+
 '''
 模式含义如果文件存在如果文件不存在常用场景
 'r'只读 (Read)从头开始读取报错 (FileNotFoundError)默认模式，读取配置文件或文本
