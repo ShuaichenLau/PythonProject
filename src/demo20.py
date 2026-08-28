@@ -113,11 +113,12 @@ def select():
 
 
 # 显示文件中所有的学生
-def show_all_stuent():
+def show_all_stuentd():
     if os.path.exists(filename):
         with open(filename, 'r', encoding='utf-8') as rfile:
             for line in rfile.readlines():
-                print(line)
+                stu_dict = eval(line)
+                print(stu_dict)  # 输出不再带有额外多余的空行
     else:
         print('文件不存在, 系统环境数据有误1')
 
@@ -133,7 +134,7 @@ def count_student():
 # todo 更新学生的逻辑还有待完善
 # 更新修改学生信息
 def update_student():
-    show_all_stuent()
+    show_all_stuentd()
     student_list_old = []
     found = False
     if os.path.exists(filename):
@@ -143,22 +144,28 @@ def update_student():
         student_id = input('请输入要修改的学生ID')
         with open(filename, 'w', encoding='utf-8') as wfile:
             for stu in student_list_old:
-                if stu['id'] == student_id:
+                stu_dict=eval(stu)
+
+                if stu_dict['id'] == student_id:
                     found=True
-                    print(stu)
+                    print(stu_dict)
                     print('已经找到该学生的信息,请进行修改')
                     while True:
                         try:
-                            stu['name'] = input('请输入修改后的姓名:')
-                            stu['english'] = input('请输入修改后的英语成绩:')
-                            stu['python'] = input('请输入修改后的Python成绩:')
-                            stu['java'] = input('请输入修改后的Java成绩:')
-                        except:
+                            stu_dict['name'] = input('请输入修改后的姓名:')
+                            stu_dict['english'] = input('请输入修改后的英语成绩:')
+                            stu_dict['python'] = input('请输入修改后的Python成绩:')
+                            stu_dict['java'] = input('请输入修改后的Java成绩:')
+
+                            wfile.write(str(stu_dict) + '\n') #将字典转为字符串再拼接
+                            print('修改完成!')
+                            break
+                        except Exception as e:
+                            print(f'输入异常，原因: {e}，异常类型: {type(e).__name__}')
                             print('输入异常,请重新输入!')
-                    wfile.write(stu + '\n')
-                    print('修改完成!')
+
                 else:
-                    wfile.write(stu + '\n') #未修改的学生信息应该原样写回
+                    wfile.write(str(stu_dict) + '\n') #未修改的学生信息应该原样写回
             if found == False:
                 answer=input('没有找到该学生的信息,是否要继续修改其他学生的信息? y/n \n')
                 if answer == 'y' or answer == 'Y':
@@ -199,7 +206,7 @@ def main():
                 count_student()
 
             elif choice == 7:
-                show_all_stuent()
+                show_all_stuentd()
 
 
 if __name__ == '__main__':
