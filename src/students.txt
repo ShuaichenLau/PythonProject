@@ -1,4 +1,4 @@
-{'id': '1001', 'name': 'slice', 'english': '20', 'python': '30', 'java': '40'}
-{'id': '1002', 'name': 'slice1', 'english': '20', 'python': '30', 'java': '40'}
-{'id': '1003', 'name': 'slice12', 'english': '20', 'python': '30', 'java': '40'}
-{'id': '1004', 'name': 'slice122', 'english': '20', 'python': '30', 'java': '40'}
+{'id': '1001', 'name': 'slice', 'english': '10', 'python': '30', 'java': '10'}
+{'id': '1002', 'name': 'slice1', 'english': '20', 'python': '30', 'java': '20'}
+{'id': '1003', 'name': 'slice12', 'english': '40', 'python': '30', 'java': '30'}
+{'id': '1004', 'name': 'slice122', 'english': '50', 'python': '30', 'java': '40'}
