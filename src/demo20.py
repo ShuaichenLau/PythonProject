@@ -210,9 +210,7 @@ def delete():
             else:
                 print('没有找到学生ID{}的学生信息'.format(stuId))
             answer = input('还要继续删除学生信息吗? y/n \n')
-            if answer.lower() == 'y':
-                break
-            else:
+            if answer.lower() != 'y':
                 return
 
         else:
