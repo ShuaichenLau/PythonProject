@@ -48,6 +48,7 @@ print(min(t4))
 print(sum(t4))
 print(len(t4))
 print(sorted(t4))
+#  升序降序 排序方式
 print(sorted(t4,reverse=True))
 
 
