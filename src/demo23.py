@@ -52,4 +52,25 @@ print(sorted(t4))
 print(sorted(t4,reverse=True))
 
 
+print('数组转元祖======')
+t5=tuple(list2)
+print(type(t5))
+
+
+
+# 定义函数：*nums 接收任意多个位置参数，自动打包成元组
+def sum_num(*nums):
+    # 定义累加初始值
+    total = 0
+    # 遍历元组，逐个累加
+    for n in nums:
+        total += n
+    print(f"传入数字总和为：{total}")
+
+# 调用测试：传任意个数数字
+sum_num(1, 2)
+sum_num(10, 20, 30)
+sum_num(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+sum_num()   # 不传参数，总和为0
+
 
