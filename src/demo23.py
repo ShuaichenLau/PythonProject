@@ -26,9 +26,7 @@ for i, e in enumerate(list2):
 print('=======================倒序输出=====')
 print(list2[::-1])
 
-
 print(type(list2))
-
 
 print('=======================元祖=====')
 # 元祖  不可变数组
