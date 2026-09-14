@@ -72,3 +72,26 @@ sum_num(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
 sum_num()   # 不传参数，总和为0
 
 
+
+def test(x,y):
+    a=x*y
+    b=x+y
+    return a,b
+# 用一个变量去接收 那结果是元祖
+print(test(2,3))
+
+# 多变量接收就是分别接收
+a1,a2=test(3,4)
+print(a1)
+print(a2)
+
+
+# 多变量接收就是分别接收
+# ValueError: not enough values to unpack (expected 3, got 2)  注意长度问题
+# a3,a4,a5=test(3,4)
+# print(a3)
+# print(a3)
+# print(a5)
+
+
+
