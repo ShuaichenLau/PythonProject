@@ -49,10 +49,20 @@ print(sorted(t4))
 #  升序降序 排序方式
 print(sorted(t4,reverse=True))
 
+print('test')
+
 
 print('数组转元祖======')
 t5=tuple(list2)
 print(type(t5))
+
+print('********************************************************************')
+
+func = lambda :'hello liusc'
+print(func())
+
+print('********************************************************************')
+
 
 
 
