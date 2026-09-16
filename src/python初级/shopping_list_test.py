@@ -2,6 +2,7 @@ import unittest
 
 from shopping_list import ShoppingList
 
+
 class TestShoppingList(unittest.TestCase):
     def setUp(self):
         self.shopping_list = ShoppingList({"iphone4": 20, "iphone5": 30, "iphone6": 40})

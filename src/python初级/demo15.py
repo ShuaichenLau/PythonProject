@@ -38,7 +38,7 @@ print(math.log2(2))
 lines=[]
 
 #  上下文管理器
-with open('data.txt','r',encoding='UTF-8') as file:
+with open('../data.txt', 'r', encoding='UTF-8') as file:
     for line in file:
         print(line)
         lines.append(line)
@@ -49,12 +49,12 @@ print("打印输出",lines)
 
 # with open('output.txt', 'w', encoding='UTF-8') as out_file:
 
-with open('output.txt','w',encoding='UTF-8') as out_file:
+with open('../output.txt', 'w', encoding='UTF-8') as out_file:
     out_file.writelines(lines)
 print("=========================")
 
 
-with (open('output1.txt','w',encoding='UTF-8') as out_file1):
+with (open('../output1.txt', 'w', encoding='UTF-8') as out_file1):
     for line in lines:
         out_file1.write(line)
     out_file1.write('\n')
