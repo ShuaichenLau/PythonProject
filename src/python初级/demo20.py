@@ -5,7 +5,7 @@
 
 import os
 
-filename = 'students.txt'
+filename = '../students.txt'
 
 
 def menm():

@@ -1,8 +1,9 @@
 '''
 遍历字符串
 '''
+from functools import reduce
 
-str = 'asdfghjkl'
+str1 = 'asdfghjkl'
 
 # for tiem in str:
 #     print(tiem)
@@ -111,3 +112,49 @@ print(a2)
 # print(a3)
 # print(a3)
 # print(a5)
+
+
+print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+list4 = [1, 2, 3, 4, 5]
+
+
+# ** 是幂运算符（次方运算符）。
+def func(x):
+    return x ** 2
+
+
+result = map(func, list4)
+print(result)
+print(list(result))
+
+
+def funA(x, y):
+    return x + y
+
+
+print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+# 归并结果集
+print(reduce(funA, list4))
+print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~1111')
+
+list5 = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+
+# 过滤出偶数
+def funB(num):
+    return num % 2 == 0
+
+
+print(list(filter(funB, list5)))
+# 排序
+print(sorted(list5, reverse=True))
+
+print(sorted([34, 78, -10, 6, 11]))  # 开序
+print(sorted([34, 78, -10, 6, 11], reverse=True))  # 降序
+print(sorted(['banana', 'apple', 'cucumber', 'demo']))
+print(sorted(['Banana', 'apple', 'Cucumber', 'demo'], key=lambda str: str.lower()))
+print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~12')
+print(sorted(['Banana', 'apple', 'Cucumber', 'demo'], key=str.lower))
+print(sorted(['aaaa', 'aaaaaaa', 'a', 'aa'], key=lambda str: len(str)))
+
+
