@@ -24,5 +24,4 @@ while True:
     if msg == 'byebye':
         break
 
-
 client_socket.close()
