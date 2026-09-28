@@ -11,7 +11,7 @@ import socket
 
 client_socket=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 
-
+# TCP客户端不需要绑定端口号, 因为TCP客户端是主动发起连接
 server_addr=('192.168.3.199',8000)
 # '' 代表本地IP
 client_socket.connect(server_addr)
