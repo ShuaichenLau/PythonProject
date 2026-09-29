@@ -1,11 +1,14 @@
-import time as date
+import datetime as datetime
+import time as time
 
-print(date.time())
+print(time.time())
 
-print(date.ctime())
+print(time.ctime())
 
-print(date.strftime('%Y-%m-%d'))
+print(time.strftime('%Y-%m-%d'))
 
-print(date.strftime('%Y-%m-%d %H:%M:%S'))
+print(time.strftime('%Y-%m-%d %H:%M:%S'))
 
+print(datetime)
 
+print(datetime.time)

@@ -3,8 +3,8 @@
 Python 3.7 标准库 time 模块 使用示例
 """
 
+import datetime
 import time
-
 
 # ============================================================
 # 1. time.time() —— 获取当前时间戳（自1970-01-01 00:00:00 UTC 起的秒数）
@@ -20,6 +20,14 @@ print("当前时间戳:", timestamp)   # 例如: 1690000000.123456
 print("开始休眠...")
 time.sleep(1.5)   # 暂停 1.5 秒，可以传小数
 print("休眠结束")
+
+
+date= datetime.date.today()
+# weekday() → 从 0 开始，周一 = 0（程序员风格）
+print(date.weekday())
+# isoweekday() → 从 1 开始，周一 = 1（ISO 8601 国际标准，更符合人类习惯）
+print(date.isoweekday())
+
 
 
 # ============================================================
