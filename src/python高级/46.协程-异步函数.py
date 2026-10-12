@@ -17,6 +17,7 @@ async def work():
 
 # 其他协程的入口
 async def main():
+    # 多任务异步
     task1 = asyncio.create_task(eat())
     task2 = asyncio.create_task(work())
     await  task1
