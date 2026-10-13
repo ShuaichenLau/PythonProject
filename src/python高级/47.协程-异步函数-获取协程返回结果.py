@@ -30,6 +30,13 @@ async def main():
     # 显示更详细的结果
     result = await asyncio.wait([task1,task2])
     print(result)
+    print(type(result))
+
+    print('======================================================')
+    done, pending = await asyncio.wait([task1, task2])
+    for task in done:
+        result = task.result()  # 通过 .result() 获取返回值
+        print(result)
 
 
 if __name__ == '__main__':
