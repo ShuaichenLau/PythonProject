@@ -1,6 +1,6 @@
 from typing import TypedDict, Annotated
 
-from langchain_demo.my_llm import deepseek_llm
+from langchain_demo.my_llm import deepseek_llm_no_think
 
 
 class Actor(TypedDict):
@@ -15,9 +15,9 @@ class Moive(TypedDict):
     cast: list[Actor] = Annotated[list[Actor],"电影演员列表"]
 
 # 绑定结构化输出模型
-model_with_Structured_output=deepseek_llm.with_structured_output(Moive)
+model_with_Structured_output=deepseek_llm_no_think.with_structured_output(Moive)
 # 调用大模型
-resp=model_with_Structured_output.invoke("介绍一下温子仁电影《潜伏5：红门》")
+resp=model_with_Structured_output.invoke("介绍一下温子仁电影《潜伏5：红门")
 print(type(resp))
 
 print(resp)

@@ -1,6 +1,6 @@
 from langchain_core.tools import tool
 
-from langchain_demo.my_llm import deepseek_llm
+from langchain_demo.my_llm import deepseek_llm_no_think
 
 
 # 1 创建工具
@@ -10,7 +10,7 @@ def get_weather(local: str) -> str:
     return f"{local}天气非常晴朗...."
 
 # 2. 工具告诉大模型
-model_with_tools = deepseek_llm.bind_tools([get_weather])
+model_with_tools = deepseek_llm_no_think.bind_tools([get_weather])
 # 3.模型调用句返回工具结果
 resp = model_with_tools.invoke("北京天气是什么?")
 

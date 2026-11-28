@@ -33,6 +33,18 @@ deepseek_llm = ChatDeepSeek(
     # model_kwargs={"thinking": {"type": "disabled"}},  # 关闭思维链模式
 )
 
+deepseek_llm_no_think = ChatDeepSeek(
+    api_key=DEEPSEEK_API_KEY,
+    api_base=DEEPSEEK_BASE_URL,
+    # model="deepseek-chat",
+    model="deepseek-flash",
+    # model="deepseek-v4-pro",
+    temperature=0.7,
+    # rate_limiter=5
+    # model="deepseek-flash",
+    extra_body={"thinking": {"type": "disabled"}},  # 关闭思维链模式
+)
+
 zhipu_llm = ChatDeepSeek(
     api_key=ZHIPUAI_API_KEY,
     api_base=ZHIPUAI_BASE_URL,
